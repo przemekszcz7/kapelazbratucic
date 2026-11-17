@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kapela z Bratucic</title>
+<meta name="description" content="Kapela z Bratucic – muzyka na żywo na weselach, festynach i zabawach. Kontakt: 691 570 476.">
+<meta name="theme-color" content="#1c1512">
+<link rel="icon" href="https://i.ibb.co/CcM21h2/894689347-122297909306158262-2149157148463529145-n.jpg">
+<link rel="apple-touch-icon" href="https://i.ibb.co/CcM21h2/894689347-122297909306158262-2149157148463529145-n.jpg">
+<meta property="og:title" content="Kapela z Bratucic">
+<meta property="og:description" content="Muzyka na żywo z Bratucic.">
+<meta property="og:image" content="https://i.ibb.co/yt8vyzR/468521579-122186422094158262-8696238439322760607-n.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700;800&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Układ: ludowa kapela. Pełnoekranowe zdjęcie sceny, pasy w stylu łowickich wycinanek jako separatory, ciepłe ciemne tło. */
+:root{
+  --ink:#1c1512;
+  --ink-2:#2a201b;
+  --paper:#f5ecdc;
+  --red:#c0262d;
+  --gold:#e3a72f;
+  --green:#3f7a4c;
+  --pink:#d9578a;
+  --font-display:"Alegreya SC",Georgia,serif;
+  --font-body:"Alegreya Sans",system-ui,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--ink);color:var(--paper);font-family:var(--font-body);font-size:19px;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:100%;max-width:1160px;margin-inline:auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;line-height:1.02;text-wrap:balance}
+h2{font-size:clamp(2.2rem,5.4vw,3.8rem)}
+.kicker{font-family:var(--font-display);font-weight:500;letter-spacing:.2em;color:var(--gold);font-size:.95rem;text-transform:uppercase}
+
+/* pasy ludowe */
+.stripe{height:18px;background:
+  repeating-linear-gradient(90deg,var(--red) 0 36px,var(--gold) 36px 48px,var(--green) 48px 84px,var(--gold) 84px 96px,var(--pink) 96px 108px,var(--gold) 108px 120px)}
+.stripe.thin{height:8px}
+
+header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--ink) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid #3a2d26}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--font-display);font-weight:800;font-size:1.35rem;letter-spacing:.03em}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);background:var(--ink-2)}
+nav{display:flex;align-items:center;gap:26px}
+nav a{text-decoration:none;font-weight:500;font-size:1rem}
+nav a:hover{color:var(--gold)}
+.pill{background:var(--red);padding:.45em 1.1em;border-radius:999px;font-weight:700;white-space:nowrap}
+nav a.pill:hover{color:var(--paper);background:#a21d24}
+@media(max-width:760px){nav a:not(.pill){display:none}}
+@media(max-width:380px){.brand span{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink-2)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,21,18,.25) 0%,rgba(28,21,18,.55) 45%,var(--ink) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-block:80px 64px}
+.hero h1{font-size:clamp(3.2rem,10vw,8rem);margin-block:14px 18px;text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:30em;font-size:1.25rem;color:#eadfca}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.8em 1.6em;border-radius:999px;background:var(--red);color:var(--paper);text-decoration:none;font-weight:700;font-size:1.05rem;border:2px solid var(--red);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#a21d24}
+.btn.alt{background:transparent;border-color:var(--paper)}
+.btn.alt:hover{background:var(--paper);color:var(--ink)}
+
+section{padding-block:clamp(60px,9vw,110px)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,80px);align-items:center}
+.split p+p{margin-top:14px}
+.split p{color:#e4d8c3;max-width:32em}
+.split h2{margin-block:10px 20px}
+.photo{position:relative}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border:6px solid var(--paper);transform:rotate(1.6deg);box-shadow:0 24px 50px rgba(0,0,0,.5);background:var(--ink-2)}
+.photo::before{content:"";position:absolute;inset:-14px 14px 14px -14px;background:var(--red);z-index:-1;transform:rotate(-1.5deg)}
+@media(max-width:820px){.split{grid-template-columns:1fr}.photo{max-width:440px;margin-inline:auto;width:100%}}
+
+/* okazje */
+#okazje{background:var(--ink-2)}
+.occ{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.occ div{padding:26px 20px;border-top:6px solid var(--gold);background:var(--ink);}
+.occ div:nth-child(2){border-color:var(--red)}
+.occ div:nth-child(3){border-color:var(--green)}
+.occ div:nth-child(4){border-color:var(--pink)}
+.occ h3{font-size:1.6rem;margin-bottom:8px}
+.occ p{font-size:1rem;color:#d9cdb8}
+@media(max-width:900px){.occ{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.occ{grid-template-columns:1fr}}
+
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:12px;margin-top:36px}
+.gal button{all:unset;display:block;position:relative;overflow:hidden;cursor:zoom-in;background:var(--ink-2)}
+.gal button:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal button:hover img{transform:scale(1.06)}
+.gal button:nth-child(1){grid-column:span 3;grid-row:span 3}
+.gal button:nth-child(2){grid-column:span 3;grid-row:span 2}
+.gal button:nth-child(3){grid-column:span 3;grid-row:span 2}
+.gal button:nth-child(4){grid-column:span 3;grid-row:span 2}
+.gal button:nth-child(5){grid-column:span 3;grid-row:span 2}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gal button:nth-child(n){grid-column:span 1;grid-row:span 1}.gal button:nth-child(1){grid-column:span 2;grid-row:span 2}}
+
+/* kontakt */
+#kontakt{background:var(--paper);color:var(--ink)}
+#kontakt .kicker{color:var(--red)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px)}
+.tel{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,7vw,4.4rem);line-height:1;color:var(--red);text-decoration:none;margin-block:16px 22px}
+.tel:hover{color:#8f1b21}
+.clist{list-style:none;display:grid;gap:12px}
+.clist li{border-top:2px solid var(--ink);padding-top:10px;display:flex;flex-direction:column}
+.clist small{font-family:var(--font-display);letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;color:#6b5a4c}
+.clist a{font-weight:700;text-decoration:none;word-break:break-word}
+.clist a:hover{color:var(--red)}
+form{display:grid;gap:14px;align-content:start}
+label{font-family:var(--font-display);letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;color:#6b5a4c}
+input,textarea{width:100%;margin-top:5px;padding:12px 14px;border:2px solid var(--ink);background:#fffaf0;color:var(--ink);font:inherit;border-radius:0}
+input:focus,textarea:focus{outline:3px solid var(--gold);outline-offset:0}
+textarea{min-height:120px;resize:vertical}
+form button{font-family:inherit;cursor:pointer;justify-content:center}
+.note{font-size:.9rem;color:#6b5a4c}
+@media(max-width:820px){.contact{grid-template-columns:1fr}}
+
+footer{background:var(--ink);padding-block:26px;font-size:.95rem;color:#c7b9a1}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+footer a{text-decoration:none}footer a:hover{color:var(--gold)}
+
+dialog{border:0;background:transparent;max-width:100vw;max-height:100vh;width:100%;height:100%;padding:0}
+dialog::backdrop{background:rgba(10,7,5,.94)}
+.lb{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:56px 16px}
+.lb img{max-width:100%;max-height:100%;object-fit:contain}
+.lb button{position:absolute;background:var(--ink);border:2px solid var(--gold);color:var(--paper);width:46px;height:46px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+.lb button:hover{background:var(--red);border-color:var(--red)}
+.lb .x{top:14px;right:14px}.lb .p{left:14px;top:50%}.lb .n{right:14px;top:50%}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="https://i.ibb.co/CcM21h2/894689347-122297909306158262-2149157148463529145-n.jpg" alt="Logo Kapeli z Bratucic" width="40" height="40"><span>Kapela z Bratucic</span></a>
+    <nav aria-label="Menu główne">
+      <a href="#o-nas">O nas</a>
+      <a href="#okazje">Gramy na</a>
+      <a href="#galeria">Zdjęcia</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="pill" href="tel:+48691570476">691 570 476</a>
+    </nav>
+  </div>
+</header>
+<div class="stripe thin" aria-hidden="true"></div>
+
+<main id="top">
+<div class="hero">
+  <img src="https://i.ibb.co/yt8vyzR/468521579-122186422094158262-8696238439322760607-n.jpg" alt="Kapela z Bratucic na scenie" fetchpriority="high">
+  <div class="wrap">
+    <p class="kicker">Bratucice · muzyka na żywo</p>
+    <h1>Kapela <span>z Bratucic</span></h1>
+    <p>Gramy tak, żeby nogi same rwały się do tańca. Zaproś nas na swoją zabawę.</p>
+    <div class="cta">
+      <a class="btn" href="tel:+48691570476">Zadzwoń: 691 570 476</a>
+      <a class="btn alt" href="#galeria">Zobacz zdjęcia</a>
+    </div>
+  </div>
+</div>
+<div class="stripe" aria-hidden="true"></div>
+
+<section id="o-nas">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">O nas</p>
+      <h2>Muzyka, która łączy ludzi</h2>
+      <p>Jesteśmy kapelą z Bratucic. Gramy na żywo dla ludzi z okolicy i nie tylko, a dobrą zabawę stawiamy na pierwszym miejscu.</p>
+      <p>Zagramy na Twojej imprezie, a repertuar dopasujemy do gości. Napisz lub zadzwoń, a ustalimy szczegóły.</p>
+      <div class="cta"><a class="btn" href="#kontakt">Umów występ</a></div>
+    </div>
+    <div class="photo"><img loading="lazy" src="https://i.ibb.co/21hXpXyv/892059353-122297642114158262-7195869198589402469-n.jpg" alt="Kapela z Bratucic podczas występu"></div>
+  </div>
+</section>
+
+<div class="stripe thin" aria-hidden="true"></div>
+
+<section id="okazje">
+  <div class="wrap">
+    <p class="kicker">Gramy na</p>
+    <h2>Każda okazja jest dobra</h2>
+    <div class="occ">
+      <div><h3>Wesela</h3><p>Od oczepin po ostatni taniec nad ranem.</p></div>
+      <div><h3>Festyny i dożynki</h3><p>Plenerowa zabawa dla całej wsi.</p></div>
+      <div><h3>Jubileusze</h3><p>Urodziny, rocznice i rodzinne święta.</p></div>
+      <div><h3>Imprezy lokalne</h3><p>Spotkania, zabawy i wydarzenia w okolicy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <p class="kicker">Zdjęcia</p>
+    <h2>Z naszych występów</h2>
+    <div class="gal" id="gal">
+      <button type="button"><img loading="lazy" src="https://i.ibb.co/tMMPkYJG/874669781-122297641958158262-1527717712655060138-n.jpg" alt="Kapela z Bratucic – zdjęcie 1"></button>
+      <button type="button"><img loading="lazy" src="https://i.ibb.co/kVCbnWcN/891676154-122297497010158262-7428628342704494627-n.jpg" alt="Kapela z Bratucic – zdjęcie 2"></button>
+      <button type="button"><img loading="lazy" src="https://i.ibb.co/YTkcM7BM/891194569-122297469824158262-547517594778992866-n.jpg" alt="Kapela z Bratucic – zdjęcie 3"></button>
+      <button type="button"><img loading="lazy" src="https://i.ibb.co/4RrPtB40/886764467-122297469746158262-1208948943803091471-n.jpg" alt="Kapela z Bratucic – zdjęcie 4"></button>
+      <button type="button"><img loading="lazy" src="https://i.ibb.co/21hXpXyv/892059353-122297642114158262-7195869198589402469-n.jpg" alt="Kapela z Bratucic – zdjęcie 5"></button>
+    </div>
+  </div>
+</section>
+
+<div class="stripe" aria-hidden="true"></div>
+
+<section id="kontakt">
+  <div class="wrap contact">
+    <div>
+      <p class="kicker">Kontakt</p>
+      <h2>Zaproś nas do zabawy</h2>
+      <a class="tel" href="tel:+48691570476">691 570 476</a>
+      <ul class="clist">
+        <li><small>E-mail</small><a href="mailto:kapelazbratucic@gmail.com">kapelazbratucic@gmail.com</a></li>
+        <li><small>Adres</small><span>Bratucice, 32-712</span></li>
+        <li><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61588039078882" target="_blank" rel="noopener">Kapela z Bratucic na Facebooku</a></li>
+      </ul>
+    </div>
+    <form id="f" novalidate>
+      <div><label for="n">Imię i nazwisko</label><input id="n" name="n" autocomplete="name"></div>
+      <div><label for="t">Telefon</label><input id="t" name="t" type="tel" autocomplete="tel"></div>
+      <div><label for="m">Jaka okazja, kiedy i gdzie?</label><textarea id="m" name="m" placeholder="Np. wesele, 14 czerwca, sala w Bratucicach"></textarea></div>
+      <button class="btn" type="submit">Wyślij zapytanie</button>
+      <p class="note" id="fn">Otworzy się Twój program pocztowy z gotową wiadomością.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Kapela z Bratucic</span>
+    <span>Bratucice, 32-712 · <a href="tel:+48691570476">691 570 476</a></span>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Podgląd zdjęcia">
+  <div class="lb">
+    <button class="x" type="button" aria-label="Zamknij">✕</button>
+    <button class="p" type="button" aria-label="Poprzednie">‹</button>
+    <img id="lbi" alt="">
+    <button class="n" type="button" aria-label="Następne">›</button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  document.getElementById('y').textContent=new Date().getFullYear();
+  var dlg=document.getElementById('lb'),img=document.getElementById('lbi');
+  var imgs=[].slice.call(document.querySelectorAll('#gal img')),i=0;
+  function show(){img.src=imgs[i].src;img.alt=imgs[i].alt}
+  imgs.forEach(function(im,k){im.closest('button').addEventListener('click',function(){i=k;show();dlg.showModal()})});
+  function step(d){i=(i+d+imgs.length)%imgs.length;show()}
+  dlg.querySelector('.x').onclick=function(){dlg.close()};
+  dlg.querySelector('.p').onclick=function(){step(-1)};
+  dlg.querySelector('.n').onclick=function(){step(1)};
+  dlg.addEventListener('click',function(e){if(e.target.classList.contains('lb'))dlg.close()});
+  dlg.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
+  document.getElementById('f').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=this.n.value.trim(),t=this.t.value.trim(),m=this.m.value.trim();
+    if(!m){document.getElementById('fn').textContent='Napisz kilka słów o okazji i terminie.';return}
+    var body='Imię i nazwisko: '+n+'\nTelefon: '+t+'\n\n'+m;
+    location.href='mailto:kapelazbratucic@gmail.com?subject='+encodeURIComponent('Zapytanie o występ – Kapela z Bratucic')+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
