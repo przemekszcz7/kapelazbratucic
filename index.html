@@ -108,7 +108,7 @@ section{padding-block:clamp(60px,9vw,110px)}
 /* kontakt */
 #kontakt{background:var(--paper);color:var(--ink)}
 #kontakt .kicker{color:var(--red)}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px)}
+.contact{display:block;max-width:760px}
 .tel{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,7vw,4.4rem);line-height:1;color:var(--red);text-decoration:none;margin-block:16px 22px}
 .tel:hover{color:#8f1b21}
 .clist{list-style:none;display:grid;gap:12px}
@@ -226,13 +226,6 @@ dialog::backdrop{background:rgba(10,7,5,.94)}
         <li><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61588039078882" target="_blank" rel="noopener">Kapela z Bratucic na Facebooku</a></li>
       </ul>
     </div>
-    <form id="f" novalidate>
-      <div><label for="n">Imię i nazwisko</label><input id="n" name="n" autocomplete="name"></div>
-      <div><label for="t">Telefon</label><input id="t" name="t" type="tel" autocomplete="tel"></div>
-      <div><label for="m">Jaka okazja, kiedy i gdzie?</label><textarea id="m" name="m" placeholder="Np. wesele, 14 czerwca, sala w Bratucicach"></textarea></div>
-      <button class="btn" type="submit">Wyślij zapytanie</button>
-      <p class="note" id="fn">Otworzy się Twój program pocztowy z gotową wiadomością.</p>
-    </form>
   </div>
 </section>
 </main>
@@ -265,15 +258,7 @@ dialog::backdrop{background:rgba(10,7,5,.94)}
   dlg.querySelector('.p').onclick=function(){step(-1)};
   dlg.querySelector('.n').onclick=function(){step(1)};
   dlg.addEventListener('click',function(e){if(e.target.classList.contains('lb'))dlg.close()});
-  dlg.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
-  document.getElementById('f').addEventListener('submit',function(e){
-    e.preventDefault();
-    var n=this.n.value.trim(),t=this.t.value.trim(),m=this.m.value.trim();
-    if(!m){document.getElementById('fn').textContent='Napisz kilka słów o okazji i terminie.';return}
-    var body='Imię i nazwisko: '+n+'\nTelefon: '+t+'\n\n'+m;
-    location.href='mailto:kapelazbratucic@gmail.com?subject='+encodeURIComponent('Zapytanie o występ – Kapela z Bratucic')+'&body='+encodeURIComponent(body);
-  });
-})();
+  dlg.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});})();
 </script>
 </body>
 </html>
